@@ -2,34 +2,29 @@
 
 switch ($_REQUEST['action']) {
     case 'tabScore': {
-            $body = '';
 
-            // conneicon bd 
-            $pdo = new PDO('mysql:host=localhost;dbname=hackathon_2022', 'root', 'root');
+            $date1 = new DateTime('now', new DateTimeZone('Indian/Reunion'));
+            $date2 = new DateTime('2022-11-09 00:00:00', new DateTimeZone('Indian/Reunion'));
+            $interval = $date1->diff($date2);
+            $minuteur =   $interval->format('%H:%I:%S');
 
+            $pdo = new PDO('mysql:host=localhost;dbname=hackathon_victor', 'root', '');
 
-            $sql = "SELECT compopartie.* , equipe.nom from  compopartie inner join partie on partie_id = partie.id inner join equipe on equipe_id = equipe.id where partie_id=1 order by scoreActuel desc;";
+            $sql = "select * from infotabscore";
             $res = $pdo->query($sql);
-            // $lignes = $res->fetchAll();
+            $lignes = $res->fetchAll();
             $i = 1;
-            while ($ligne = $res->fetch()) {
-                if ($i == 1) {
-                    $color = '#70c17b';
-                } else if ($i == 2) {
-                    $color = '#f2e783';
-                } else if ($i == 3) {
-                    $color = '#fecb7e';
-                } else {
-                    $color = 'white';
-                }
-                $body .= '<tr style="background-color:' . $color . '">';
-                $body .= '<td >' . $i . '</td>';
-                $body .= '<td>' . $ligne['nom'] . '</td>';
-                $body .= '<td>' . $ligne['scoreActuel'] . '</td>';
-                $body .= '</tr>';
-                $i++;
-            }
-            echo $body;
+
+
+            // afficher les lignes en json avec l'objet partie 
+
+            $partie = json_encode(['partie' => $lignes, 'minuteur' => ['time' => $minuteur]]);
+            echo $partie;
+
+            // echo json_encode($test);
+
+
+            // var_dump($session1);
             break;
         }
 

@@ -37,36 +37,38 @@
                 <?php
 
 
-                $nivActuel = $nivActuel['enigme_id'];
-                echo "niveau actuel : " . $nivActuel;
-                foreach ($enigme as $enigm) {
+                // $nivActuel = $nivActuel['enigme_id'];
+                // echo "niveau actuel : " . $nivActuel;
+                // foreach ($enigme as $enigm) {
 
-                    if ($enigm['id'] < $nivActuel) {
-                        $color = 'green';
-                    } else {
-                        $color = 'red';
-                    }
+                //     if ($enigm['id'] < $nivActuel) {
+                //         $color = 'green';
+                //     } else {
+                //         $color = 'red';
+                //     }
                 ?>
-                    <div class="enigme<?php echo $enigm['id'] ?>" style="background:<?php echo $color; ?>;border: 2px black groove; height:50px" class="glace">
-                        <?php
-                        echo $enigm['nom'];
-                        echo $enigm['id'];
-                        // echo $enigm['flag'];
-                        echo $enigm['point']; ?>
-                        <button dt-idEnigme="<?php echo $enigm['id']; ?>" class="btnTestFlag">Try It</button>
-                    </div>
-                <?php } ?>
+                <!-- <div class="enigme<?php //echo $enigm['id'] 
+                                        ?>" style="background:<?php // echo $color; 
+                                                                ?>;border: 2px black groove; height:50px" class="glace"> -->
+                <?php
+                // echo $enigm['nom'];
+                // echo $enigm['id'];
+                // echo $enigm['flag'];
+                // echo $enigm['point']; 
+                ?>
+                <!-- <button dt-idEnigme="<?php // echo $enigm['id']; 
+                                            ?>" class="btnTestFlag">Try It</button> -->
+                <!-- </div> -->
+                <!-- <?php // } 
+                        ?> -->
 
+                <!-- </div> -->
+
+
+
+            </ul>
         </div>
-
-
-
-        </ul>
-</div>
-</nav>
-
-
-
+    </nav>
 </div>
 <script>
     $(document).ready(function() {

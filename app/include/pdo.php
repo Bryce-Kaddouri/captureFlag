@@ -1,13 +1,26 @@
 <?php
+include "class.enigme.php";
+include "class.partie.php";
+
+$enigme = new Challenge('1', 'libelle 1', 1, 'flag1', 'https://test.com');
+$session = new Session('1', '2022-11-08 19:32:34', '2022-11-08 20:32:33');
+$date1 = $session->getDateDebut();
+$date2 = $session->getDateFin();
+
+// echo $session->getTempsMinuteur($date1, $date2);
+
+
+
+
 class PdoGsb
 {
     private static $serveur = 'mysql:host=localhost';
     // private static $serveur = 'mysql:host=172.18.156.100';
-    private static $bdd = 'dbname=hackathon_2022';
+    private static $bdd = 'dbname=hackathon_victor';
     // private static $bdd = 'dbname=ap5_BDMEDOCLAB3';
     private static $user = 'root';
     // private static $user = 'gsb_dbuser3';
-    private static $mdp = 'root';
+    private static $mdp = '';
     // private static $mdp = '239xc_w13';
     private static $monPdo;
     private static $monPdoGsb = null;
@@ -47,7 +60,7 @@ class PdoGsb
      */
     public function getInfosJoueur($login, $mdp)
     {
-        $req = "select login, id from equipe where login='$login' and pwd='$mdp';";
+        $req = "select id, login, libelle from equipe where login='$login' and mdp=SHA2('$mdp', 512);";
 
         $rs = PdoGsb::$monPdo->query($req);
         $ligne = $rs->fetch();
@@ -56,7 +69,7 @@ class PdoGsb
 
     public function getEnigme()
     {
-        $req = "select * from enigme order by nom;";
+        $req = "select * from challenge order by numero;";
         $rs = PdoGsb::$monPdo->query($req);
         $ligne = $rs->fetchAll();
         return $ligne;
@@ -65,15 +78,6 @@ class PdoGsb
     public function getIdEquipe($nom)
     {
         $req = "select id from equipe where nom='$nom';";
-        $rs = PdoGsb::$monPdo->query($req);
-        $ligne = $rs->fetch();
-        return $ligne;
-    }
-
-    public function getNivActuel($idEquipe)
-    {
-        $req = "select enigme_id from compopartie where equipe_id=$idEquipe;";
-        // echo $req;
         $rs = PdoGsb::$monPdo->query($req);
         $ligne = $rs->fetch();
         return $ligne;

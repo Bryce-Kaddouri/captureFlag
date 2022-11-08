@@ -16,7 +16,7 @@ if (!isset($action)) {
         case 'afficherEnigme': {
                 $enigme = $pdo->getEnigme();
                 $idEquipe = $_SESSION['id'];
-                $nivActuel = $pdo->getNivActuel($idEquipe);
+                // $nivActuel = $pdo->getNivActuel($idEquipe);
 
                 include("vues/v_enigme.php");
 

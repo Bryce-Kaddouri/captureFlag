@@ -29,7 +29,7 @@ switch ($action) {
                 include("vues/v_home_profilebar.php");
                 $enigme = $pdo->getEnigme();
                 $idEquipe = $_SESSION['id'];
-                $nivActuel = $pdo->getNivActuel($_SESSION['id']);
+                // $nivActuel = $pdo->getNivActuel($_SESSION['id']);
                 include("vues/v_enigme.php");
                 include("vues/v_pied.php");
                 break;
