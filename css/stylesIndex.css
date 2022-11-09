@@ -4,23 +4,17 @@ body {
 }
 
 body {
-    background-color: #130858 !important;
-    width: 100%;
-
-
+    background-color: rgb(19, 8, 88) !important;
 }
 
 div.container {
     display: block;
     margin: auto;
-
-
-
 }
 
 .titre {
     color: white;
-    font-size: 20px;
+    font-size: 35px;
     white-space: nowrap;
 }
 
@@ -31,19 +25,9 @@ div.container {
     margin: auto;
     background-color: antiquewhite;
     height: 320px;
-    width: 90%;
+    width: 500px;
     border-radius: 1px 100px;
-    overflow: hidden;
-    max-width: 600px;
-
 }
-
-.imgHome {
-    width: 100%;
-    height: 100%;
-}
-
-
 
 .bouton {
     position: relative;
@@ -70,7 +54,6 @@ div.container {
     background-color: #414796;
     border-radius: 15px;
     text-decoration: none;
-
 }
 
 .box2 {
@@ -100,7 +83,6 @@ form {
     width: 355px;
     border-radius: 1px 1px 1px 100px;
     background-color: rgb(19, 8, 88);
-
 }
 
 .rectangle {
@@ -111,8 +93,7 @@ form {
     top: 5.5rem;
     height: 55px;
     background-color: rgb(255, 255, 255);
-    width: 90%;
-
+    width: 300px;
 }
 
 .rectangle2 {
@@ -123,45 +104,39 @@ form {
     padding: 2px;
     top: 7rem;
     background-color: rgb(255, 255, 255);
-    width: 90%;
-
+    width: 300px;
 }
 
 .mail {
     position: relative;
-    left: 0.3rem;
+    left: 0.2rem;
     font-family: Gilroy-Medium;
     font-weight: 500;
 
-
     color: rgba(45, 45, 45, 0.9);
 
-    bottom: 0;
+    bottom: 1rem;
 }
-
-
 
 .motdepasse {
     position: relative;
-    left: 0.3rem;
+    left: 0.2rem;
     font-family: Gilroy-Medium;
     font-weight: 500;
 
     color: rgba(45, 45, 45, 0.9);
-    bottom: 0;
+    bottom: 1rem;
 }
 
 .champ1 {
-
     position: relative;
-    bottom: 0;
-    left: 0.3rem;
+    bottom: 2rem;
+    left: 0.2rem;
     height: 28px;
-    background-color: #ECECFF;
+    background-color: #ececff;
     width: 280px;
     border: white solid;
     border-bottom: 1px rgba(57, 56, 56, 0.562) solid;
-
 }
 
 .champ1::placeholder {
@@ -172,10 +147,10 @@ form {
 
 .champ2 {
     position: relative;
-    bottom: 0;
+    bottom: 2rem;
     height: 28px;
     left: 0.2rem;
-    background-color: #ECECFF;
+    background-color: #ececff;
     width: 280px;
     border: white solid;
     border-bottom: 1px rgba(57, 56, 56, 0.562) solid;
@@ -185,11 +160,7 @@ form {
     position: relative;
     left: 0.3rem;
     color: rgba(67, 66, 66, 0.783);
-
 }
-
-
-
 
 .connexion {
     position: relative;
@@ -203,7 +174,6 @@ form {
     background: #414796;
     font-size: 15px;
     border: 0px;
-
 }
 
 .connexion:hover {
@@ -219,60 +189,15 @@ form {
     background: #313774;
     cursor: pointer;
     transition: 0.5s;
-
 }
 
-.carre {
-    position: relative;
-    top: 1.5rem;
-    background-color: #cdcdcd;
-    width: 35px;
-    height: 32px;
-    border-radius: 10px;
-    border: 2px solid #FFFFFF;
-    float: right;
-}
-
-.prenom {
-    position: relative;
-    color: white;
-    float: right;
-    right: 1rem;
-}
-
-.titre2 {
-    position: relative;
-    top: 2rem;
-    color: white;
-    width: 90%;
-}
-
-.challenge {
-    display: none;
-}
-
-.stat {
-    display: none;
-}
+/**/
 
 #menuToggle input {
     display: none;
 }
 
-.search {
-    position: absolute;
-    left: 2.36%;
-    right: 80.76%;
-    top: 5.47%;
-    bottom: 89.65%;
-
-    background: #D3D3F2;
-    border: 2px solid #FFFFFF;
-    border-radius: 10px;
-}
-
-@media screen and (max-width:700px) {
-
+@media screen and (max-width: 700px) {
     body {
         max-width: 400px;
         scroll-behavior: unset;
@@ -282,9 +207,7 @@ form {
         position: relative;
 
         display: block;
-        margin-right: auto;
-        margin-left: auto;
-        width: 90%;
+        margin: auto;
     }
 
     .rectangle2 {
@@ -305,76 +228,8 @@ form {
     }
 }
 
-
-@media screen and (max-width:700px) {
-    .box4 {
-        display: flex;
-
-        padding: 12px;
-        justify-content: space-between;
-
-    }
-
-    .challenge {
-        position: relative;
-        left: 0.9rem;
-        font-family: 'Inter';
-        font-weight: 100;
-        top: 0.8rem;
-        font-size: 22px;
-        color: white;
-    }
-
-    .container5 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 5px;
-        margin: 15px;
-    }
-
-    .sbox1 {
-        position: relative;
-        top: 0.5rem;
-        background-color: #D3D3F2;
-        width: 35px;
-        border-radius: 10px;
-        border: 3px solid white;
-        height: 32px;
-    }
-
-    .search {
-        position: relative;
-        top: 0.5rem;
-        left: 0.2rem;
-        height: 35px;
-        width: 255px;
-        border-radius: 10px;
-        border: 3px solid white;
-        background-color: #D3D3F2;
-    }
-
-    .sbox {
-        position: relative;
-        top: 2rem;
-        background-color: #D3D3F2;
-        width: 50px;
-        border-radius: 10px;
-        border: 3px solid white;
-        height: 45px;
-    }
-
-    .lbox {
-        position: relative;
-
-        background-color: #cdcdcd;
-        width: 330px;
-        height: 40px;
-        border-radius: 5px;
-    }
-
+@media screen and (max-width: 700px) {
     #menuToggle {
-
         display: block;
         position: relative;
         top: 50px;
@@ -384,11 +239,6 @@ form {
 
         -webkit-user-select: none;
         user-select: none;
-    }
-
-    .stat {
-        display: flex;
-        flex-direction: row;
     }
 
     #menuToggle input {
@@ -402,13 +252,16 @@ form {
         cursor: pointer;
 
         opacity: 0;
-        /*hide this */
+        /* hide this */
         z-index: 2;
-        /*and place it over the hamburger*/
+        /* and place it over the hamburger */
+
         -webkit-touch-callout: none;
     }
 
-
+    /*
+     * Just a quick hamburger
+     */
     #menuToggle span {
         display: block;
         width: 33px;
@@ -425,9 +278,8 @@ form {
 
         transform-origin: 4px 0px;
 
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-            opacity 0.55s ease;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
     }
 
     #menuToggle span:first-child {
@@ -473,7 +325,6 @@ form {
         flex-direction: column;
         padding-top: 5px;
 
-
         width: 300px;
         margin: -132px 0 0 -50px;
         padding: 50px;
@@ -487,12 +338,11 @@ form {
         transform-origin: 0% 0%;
         transform: translate(-100%, 0);
 
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     }
 
     #menu li {
         padding: 10px 0;
-
     }
 
     .wrapper {
@@ -501,7 +351,7 @@ form {
         bottom: 200px;
         display: grid;
         align-items: center;
-        gap: 10px 2em
+        gap: 10px 2em;
     }
 
     /*
@@ -510,6 +360,4 @@ form {
     #menuToggle input:checked~ul {
         transform: none;
     }
-
-
 }

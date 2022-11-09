@@ -1,74 +1,33 @@
-<div>
+<div class="container2">
 
-    <nav role="navigation">
-        <div id="menuToggle">
-
-            <!--
-          A fake / hidden checkbox is used as click reciever,
-          so you can use the :checked selector on it.
-          -->
-            <input type="checkbox" />
-            <div class="stat">
-
-                <h1 style="color: white;position:relative;bottom: 2.5rem;right: 1.5rem;">Statistique</h1>
-            </div>
-            <!--
-          Some spans to act as a hamburger.
-          
-          They are acting like a real hamburger,
-          not that McDonalds stuff.
-          -->
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-            <!--
-          Too bad the menu has to be inside of the button
-          but hey, it's pure CSS magic.
-          -->
-
-            <ul id="menu">
-                <div class="wrapper">
-                    <!-- <div class="lbox"> -->
-
-                </div>
-
-                <?php
-
-
-                // $nivActuel = $nivActuel['enigme_id'];
-                // echo "niveau actuel : " . $nivActuel;
-                // foreach ($enigme as $enigm) {
-
-                //     if ($enigm['id'] < $nivActuel) {
-                //         $color = 'green';
-                //     } else {
-                //         $color = 'red';
-                //     }
-                ?>
-                <!-- <div class="enigme<?php //echo $enigm['id'] 
-                                        ?>" style="background:<?php // echo $color; 
-                                                                ?>;border: 2px black groove; height:50px" class="glace"> -->
-                <?php
-                // echo $enigm['nom'];
-                // echo $enigm['id'];
-                // echo $enigm['flag'];
-                // echo $enigm['point']; 
-                ?>
-                <!-- <button dt-idEnigme="<?php // echo $enigm['id']; 
-                                            ?>" class="btnTestFlag">Try It</button> -->
-                <!-- </div> -->
-                <!-- <?php // } 
-                        ?> -->
-
-                <!-- </div> -->
-
-
-
-            </ul>
-        </div>
+    <input id="burger" type="checkbox" />
+    <label for="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <nav>
+        <h1 class="enigme">Enigmes</h1>
+        <ul>
+            <?php
+            // echo "<script>console.log('PHP: " . $enigmes . "');</script>";
+            foreach ($enigmes as $enigme) {
+            ?>
+                <li><a href="#"><?php echo $enigme['libelle'] ?></a></li>
+            <?php
+            }
+            ?>
+            <li><a href="#">Link #1</a></li>
+            <li><a href="#">Link #2</a></li>
+            <li><a href="#">Link #3</a></li>
+        </ul>
     </nav>
+</div>
+
+
+
+
+<!--  -->
 </div>
 <script>
     $(document).ready(function() {

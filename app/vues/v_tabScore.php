@@ -1,11 +1,15 @@
-<div style="width:100%;background-color:#f8f8f8;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
-    <div style="padding:10px 10px 10px 10px;">
+</div>
+<!-- <div style="margin-top:50px;"> -->
+<div style="width:100%;background-color:#f8f8f8;border:1px solid #ccc">
+    <div style="width:100%;">
         <p id="minuteur"></p>
     </div>
 </div>
 
+<!-- </div> -->
 
-</div>
+
+
 <table style="margin-right:auto;margin-left:auto;background-color:white;height:100%; width:100%;margin-right:auto;margin-left:auto">
     <thead>
         <tr style="background-color:blue;border: 2px solid black">

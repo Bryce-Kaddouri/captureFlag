@@ -71,8 +71,8 @@ class PdoGsb
     {
         $req = "select * from challenge order by numero;";
         $rs = PdoGsb::$monPdo->query($req);
-        $ligne = $rs->fetchAll();
-        return $ligne;
+        $lignes = $rs->fetchAll();
+        return $lignes;
     }
 
     public function getIdEquipe($nom)

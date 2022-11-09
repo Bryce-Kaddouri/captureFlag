@@ -4,8 +4,6 @@ if (!isset($action)) {
     $action = '';
 } else {
 
-    echo $action;
-
     switch ($action) {
         case 'tabScore': {
                 include("vues/v_home_profilebar.php");
